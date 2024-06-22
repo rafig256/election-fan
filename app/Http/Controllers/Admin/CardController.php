@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\saveCardRequest;
 use App\Models\Card;
+use App\Traits\FileUploadTrait;
 use Illuminate\Http\Request;
 
 class CardController extends Controller
 {
+    use FileUploadTrait;
     /**
      * Display a listing of the resource.
      */
@@ -28,9 +31,36 @@ class CardController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(saveCardRequest $request)
     {
-        //
+        if ($request->hasFile('image')){
+            $imagePath = $this->uploadImage($request , 'image' );
+        }
+        else{
+            $imagePath = NULL;
+        }
+        $card = Card::query()->create([
+            'name' => $request->name,
+            'last_name' => $request->last_name,
+            'national_code' => $request->national_code,
+            'phone' => $request->phone,
+            'location' => $request->location,
+            'sex' => $request->sex,
+            'committee' => $request->committee,
+            'image' => $imagePath,
+            'status' => true
+        ]);
+        if ($card){
+            if ($request->save){
+                toastr()->success('با موفقیت ذخیره شد');
+                return to_route('card.index');
+            }elseif ($request->save_new){
+                return redirect()->route('card.create');
+            }
+        }else{
+            toastr()->error('خطا در ذخیره اطلاعات');
+            return to_route('card.index');
+        }
     }
 
     /**
