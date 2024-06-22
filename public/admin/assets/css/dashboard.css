@@ -1,0 +1,130 @@
+*{
+    box-sizing:border-box;
+}
+.dashboard{
+    width:100%;
+}
+.dash-row{
+    width:100%;
+    display:flex;
+}
+.dash-m{
+    width:20%;
+    display:flex;
+    flex-direction:column;
+    height:90vh;
+    background-color:#014462;
+}
+.nvwl{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    height:10vh;
+    background:linear-gradient(to right, #00b4db, #0083b0);
+}
+.nvtxt{
+    height:10vh;
+    width:80%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+}
+.nvtxt span{
+    font-family:vuf-light;
+    margin-left:2%;
+    border-bottom:2px dashed #fff;
+}
+.bbtn{
+    width:20%;
+    text-align:left;
+    margin-left:5%;
+}
+.bbtn a{
+    color:#fff;
+    background-color:transparent;
+    padding:4%;
+    border:2px solid #fff;
+    border-radius:10px;
+    font-family:vuf-extrabold;
+}
+
+.item-select{
+    width:100%;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+    padding:4%;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+}
+.ist{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-family:vuf-light;
+}
+.item-select-box{
+    display:none;
+    background-color:#026592;
+}
+.item-select-box a{
+    color:#fff;
+    padding:2%;
+}
+.dash-v{
+    width:80%;
+    display:flex;
+    flex-direction:column;
+}
+.icon{
+    width:20%;
+    text-align:center;
+}
+.nl{
+    margin-right:10%;
+    text-align:right;
+    width:80%;
+
+}
+.txtnv-dash-v{
+    width:100%;
+    background: linear-gradient(to left, #24c6dc, #026592);
+    color:#fff;
+    padding:2%;
+    text-align:center;
+}
+.dash-v-row{
+    display:flex;
+    justify-content:space-around;
+    margin-top:4%;
+    width:100%;
+}
+.card-model{
+    width:40%;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    height:30vh;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+}
+.txt-card{
+    background-color:#0083b0;
+    text-align:center;
+    color:#fff;
+    padding:2%;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+}
+.box-txt{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+.btx{
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    text-align:center;
+    color:#fff;
+    padding:2%;
+}
