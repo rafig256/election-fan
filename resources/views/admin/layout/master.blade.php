@@ -31,7 +31,10 @@
                 به پنل مدیریت هواداران دکتر پزشکیان خوش آمدید
             </div>
             <div class="bbtn">
-                <a href="#">خروج</a>
+                <form action="{{route('logout')}}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-info">خروج</button>
+                </form>
             </div>
         </div>
         <div class="dash-row">
