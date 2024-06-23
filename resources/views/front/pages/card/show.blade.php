@@ -9,14 +9,18 @@
 <body>
 <main id=app>
 
-    <h1>ستاد انتخابات دکتر پزشکیان - تابستان 1403 </h1>
+    <div style='text-align:center'>ستاد انتخاباتی دکتر پزشکیان
+        <br>
+        تابستان 1403
+    </div>
+
 
     <aside class="card-front">
         <label class="number" for="cardNumber">
             نام: {{$card->name." ".$card->last_name}}
         </label>
         <label class="name" for="cardHolder">
-             مشگین شهر {{$card->location ? ' - '.$card->location : ''}}
+            {{$card->location ? $card->location : 'مشگین شهر'}}
         </label>
         <label class="expiry" for="expiryMonth" >
             {{$card->committee ? 'کمیته '.$card->committee : 'کمیته ی مردمی'}}

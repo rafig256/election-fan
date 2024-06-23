@@ -18,7 +18,7 @@
             @foreach($cards as $card)
                 <tr>
                     <td>{{$card->id}}</td>
-                    <td>{{$card->name . " ". $card->last_name}}</td>
+                    <td><a href="{{route('show-card',$card->id."_".$card->hash)}}" target="_blank">{{$card->name . " ". $card->last_name}}</a> </td>
                     <td>{{$card->national_code}}</td>
                     <td>{{$card->phone}}</td>
                     <td>{{$card->location}}</td>
