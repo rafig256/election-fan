@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('front/assets/css/style.css')}}" />
     <title>{{$card->name." ".$card->last_name}}</title>
+    <meta property="og:title" content="{{$card->name." ".$card->last_name}}">
+    <meta property="og:description" content="ستاد انتخاباتی دکتر پزشکیان">
+    <meta property="og:image" content="{{$card->image ?? asset('front/assets/img/no_image.png')}}">
+    <meta property="og:url" content="{{ url()->current() }}">
 </head>
 <body>
 <main id=app>
