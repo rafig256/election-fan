@@ -10,7 +10,8 @@ class CardController extends Controller
 {
     public function show($id)
     {
-        $card = Card::find($id);
+        list($cardId, $hash) = explode("_", $id);
+        $card = Card::query()->where('id', $cardId)->where('hash', $hash)->firstOrFail();
         $card->national_code = $this->maskNationalCode($card->national_code);
         return view('front.pages.card.show', compact('card'));
     }

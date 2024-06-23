@@ -44,18 +44,19 @@ class CardController extends Controller
             'last_name' => $request->last_name,
             'national_code' => $request->national_code,
             'phone' => $request->phone,
+            'hash' => \Str::random(4),
             'location' => $request->location,
             'sex' => $request->sex,
             'committee' => $request->committee,
             'image' => $imagePath,
-            'status' => true
+            'status' => true,
         ]);
         if ($card){
-            if ($request->save){
+            if ($request->has('save')){
                 toastr()->success('با موفقیت ذخیره شد');
                 return to_route('card.index');
-            }elseif ($request->save_new){
-                return redirect()->route('card.create');
+            }elseif ($request->has('save_new')){
+                return to_route('card.create');
             }
         }else{
             toastr()->error('خطا در ذخیره اطلاعات');

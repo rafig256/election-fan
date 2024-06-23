@@ -47,9 +47,9 @@
                 <div class="col-6">
                     <button class="btn btn-sm btn-success" type="submit" name="save">ذخیره</button>
                 </div>
-                <div class="col-6">
-                    <button class="btn btn-sm btn-warning" type="submit" name="save_new">ذخیره و جدید</button>
-                </div>
+{{--                <div class="col-6">--}}
+{{--                    <button class="btn btn-sm btn-warning" type="submit" name="save_new">ذخیره و جدید</button>--}}
+{{--                </div>--}}
             </div>
         </form>
     </div>
