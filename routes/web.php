@@ -19,7 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/card/create',[\App\Http\Controllers\Front\CardController::class , 'create'])->name('create-card');
 Route::get('/card/{id}',[\App\Http\Controllers\Front\CardController::class , 'show'])->name('show-card');
+Route::post('/card/store',[\App\Http\Controllers\Front\CardController::class, 'store'])->name('client.card.store');
+Route::get('/client/info/{id}' , [\App\Http\Controllers\Front\CardController::class , 'info'])->name('client.info');
 
 
 Route::get('/dashboard', function () {
