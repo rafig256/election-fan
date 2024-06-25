@@ -34,11 +34,11 @@
                         </div>
                         <div class="number"></div>
                         <div class="card-holder">
-                            <label>Card holder</label>
+                            <label>ستاد انتخاباتی پزشکیان</label>
                             <div></div>
                         </div>
                         <div class="card-expiration-date">
-                            <label>Expires</label>
+                            <label>کمیته ی فناوری اطلاعات</label>
                             <div></div>
                         </div>
                     </div>
@@ -66,8 +66,8 @@
 
                         </div>
                         <div class="ccv">
-                            <label>CCV</label>
-                            <div></div>
+                            <label>1403/04/08</label>
+                            <div>انتخاب من: مسعود پزشکیان</div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,16 @@
 
                     <div class="raf-box">
                         <label for="committee">کمیته</label>
-                        <input type="text" id="committee" name="committee" value="تبلیغات"/>
+                        <select name="committee" id="committee" style="width: 100%;">
+                            <option value="تبلیغات">تبلیغات</option>
+                            <option value="فضای مجازی">فضای مجازی</option>
+                            <option value="تبلیغات">تبلیغات</option>
+                            <option value="صندوق آرا">صندوق آرا</option>
+                            <option value="پخش تراکت">پخش تراکت</option>
+                            <option value="پخش تراکت">پخش تراکت</option>
+                            <option value="علمی فرهنگی">علمی فرهنگی</option>
+                            <option value="سایر">سایر</option>
+                        </select>
                     </div>
 
                     <div class="raf-box">
