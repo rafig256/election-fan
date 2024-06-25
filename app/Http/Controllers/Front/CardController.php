@@ -64,7 +64,7 @@ class CardController extends Controller
     }
 
     public function info($id){
-        $link = url('/')."card/".$id;
+        $link = url('/')."/card/".$id;
         return view('front.pages.info', compact('link'));
     }
 }

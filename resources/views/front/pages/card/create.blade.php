@@ -1,12 +1,24 @@
 <html lang="fa" dir="rtl">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{asset('front/assets/css/create_card.css')}}">
     <!--    toastr  -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" class="rel">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <title>ثبت کارت هواداری مجازی</title>
+    <style>
+        @media (max-width: 768px) {
+            .checkout {
+                width: 100%;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="checkout">
             <div class="credit-card-box">
                 <div class="flip">
@@ -75,16 +87,17 @@
 
             <form class="form" autocomplete="off" method="post" enctype="multipart/form-data" action="{{route('client.card.store')}}" novalidate>
                 @csrf
+                <div class="d-flex self-center align-items-center" >صدور کارت هواداری مجازی</div>
                 <fieldset>
                     <div class="raf-box">
-                        <label for="card-number">نام</label>
-                        <input type="text" id="card-number" name="name" required placeholder="الزامی"/>
+                        <label for="card-number">نام <span class="text-danger">*</span> </label>
+                        <input type="text" id="card-number" name="name" class="form-control" required placeholder="الزامی"/>
                         <input type="hidden" name="user_status" value="1">
                     </div>
 
                     <div class="raf-box">
-                        <label for="last_name">فامیل</label>
-                        <input type="text" id="last_name" name="last_name" required placeholder="الزامی"/>
+                        <label for="last_name"> <span class="text-danger">*</span>فامیل</label>
+                        <input type="text" id="last_name" name="last_name" required placeholder="الزامی" class="form-control"/>
                     </div>
 
                     <div class="raf-box">
@@ -92,23 +105,23 @@
                     </div>
 
                     <div class="raf-box">
-                        <label for="national_code">کد ملی</label>
-                        <input type="text" id="national_code" name="national_code" required placeholder="الزامی"/>
+                        <label for="national_code"> <span class="text-danger">*</span>کد ملی</label>
+                        <input type="text" id="national_code" name="national_code" required placeholder="الزامی" class="form-control"/>
                     </div>
 
                     <div class="raf-box">
-                        <label for="phone">موبایل</label>
-                        <input type="text" id="phone" name="phone" required placeholder="الزامی"/>
+                        <label for="phone"> <span class="text-danger">*</span>موبایل</label>
+                        <input type="text" id="phone" name="phone" required placeholder="الزامی" class="form-control"/>
                     </div>
 
                     <div class="raf-box">
-                        <label for="location">موقعیت</label>
-                        <input type="text" id="location" name="location" placeholder="مشگین شهر"/>
+                        <label for="location">شهر/روستا</label>
+                        <input type="text" id="location" name="location" placeholder="مشگین شهر" class="form-control"/>
                     </div>
 
                     <div class="raf-box">
                         <label for="committee">کمیته</label>
-                        <select name="committee" id="committee" style="width: 100%;">
+                        <select name="committee" id="committee" class="form-control" >
                             <option value="تبلیغات">تبلیغات</option>
                             <option value="فضای مجازی">فضای مجازی</option>
                             <option value="تبلیغات">تبلیغات</option>
@@ -133,6 +146,7 @@
                     <div class="raf-box">
                         <label for="image">عکس</label>
                         <input type="file" id="image" name="image" />
+                        <small class="text-danger">در صورت آپلود عکس می توانید کارت فیزیکی دریافت نمایید</small>
                     </div>
 
                 </fieldset>
