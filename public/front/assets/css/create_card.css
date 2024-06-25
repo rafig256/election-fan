@@ -34,7 +34,7 @@
 html,
 body {
     min-height: 100%;
-    font-family: samin , 'Open sans', sans-serif;
+    font-family: samim !important;
 }
 body {
     background: linear-gradient(50deg, #f3c680, hsla(179,54%,76%,1));
@@ -200,7 +200,7 @@ Checkout
     width: 460px;
     background: white;
     border-radius: 15px;
-    padding: 160px 45px 30px;
+    padding: 60px 45px 30px;
     box-shadow: 0 10px 40px hsla(0, 0, 0, .1);
 }
 
